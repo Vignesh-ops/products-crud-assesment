@@ -1,0 +1,63 @@
+.admin-page {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 30px 20px;
+  }
+  
+  .admin-container {
+    background: white;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .admin-header {
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+  }
+  
+  .admin-header h2 {
+    font-size: 26px;
+    color: #474343;
+    margin-bottom: 5px;
+  }
+  
+  .admin-subtitle {
+    color: #777;
+    font-size: 14px;
+  }
+  
+  .product-form {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+  }
+  
+  .form-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+  }
+  
+  .form-actions .btn {
+    flex: 1;
+  }
+  
+  @media (max-width: 768px) {
+    .admin-container {
+      padding: 20px;
+    }
+    
+    .admin-header h2 {
+      font-size: 22px;
+    }
+    
+    .form-actions {
+      flex-direction: column;
+    }
+    
+    .form-actions .btn {
+      width: 100%;
+    }
+  }
+  
