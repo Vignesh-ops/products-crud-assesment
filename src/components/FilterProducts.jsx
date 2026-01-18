@@ -3,7 +3,7 @@ import React from 'react';
 const FilterProducts = ({
   selectedCategory,
   onCategoryChange,
-  sortBy,
+  sortproducts,
   onSortChange,
   categories
 }) => {
@@ -24,7 +24,7 @@ const FilterProducts = ({
 
       <div className="filter-group">
         <select
-          value={sortBy}
+          value={sortproducts}
           onChange={(e) => onSortChange(e.target.value)}
           className="filter-select"
         >

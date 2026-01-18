@@ -25,10 +25,6 @@ const ProductsPage = () => {
         applyFilters();
     }, [products, searchquery, selectedCategory, sortproducts]);
 
-    useEffect(() => {
-        applyFilters();
-    }, [products]);
-
     const fetchProducts = async () => {
         
         try {
