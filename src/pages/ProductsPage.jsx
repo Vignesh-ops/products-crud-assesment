@@ -33,13 +33,11 @@ const ProductsPage = () => {
             const data = await getAllProducts();
             setProducts(data);
         } catch (error) {
-            setError(error)
+            setError(error.message)
         } finally {
-            setError('')
             setLoading(false);
         }
     };
-
     const applyFilters = () => {
         let result = [...products];
 
@@ -71,6 +69,7 @@ const ProductsPage = () => {
         setFiltereditems(result);
         setCurrentPage(1);
     };
+    
 
     //deleting the product item
     const handleDelete = async (id) => {
@@ -85,19 +84,19 @@ const ProductsPage = () => {
     };
 
     const categories = [...new Set(products.map((p) => p.category))];
-
+    
     // pagination logic
     const totalPages = Math.ceil(filteredProducts.length / productsperpage);
     const startIndex = (currentPage - 1) * productsperpage;
     const currentProducts = filteredProducts.slice(startIndex, startIndex + productsperpage);
-
+    
     if (loading) {
         return <div className="loading-screen">Loading products...</div>;
     }
     if(error) {
         return <div style={{color:'red'}}>{error}</div>
     }
-
+    
     return (
         <div className="products-page">
 
