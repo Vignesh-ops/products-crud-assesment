@@ -47,17 +47,8 @@ const Admin = ()=> {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
-    if (!formData.title || !formData.price) {
-      alert('Please fill in all required fields');
-      return;
-    }
-
-
 
     console.log('dta',formData)
-
-
 
     try {
       setLoading(true);
